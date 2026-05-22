@@ -13,11 +13,10 @@ Minimal Next.js 15 app used as a target for Roomote onboarding eval runs.
 
 ```bash
 pnpm install
-cp .env.example .env.keys
 pnpm dev
 ```
 
-Fill in `DOTENV_PRIVATE_KEY_DEVELOPMENT` in `.env.keys` before starting the app. The repository stores its runtime values in `.env.vault`, so `dotenvx` needs that private key to decrypt the development env file.
+Fill in `DOTENV_PRIVATE_KEY_DEVELOPMENT` before starting the app. The preflight script checks for it automatically.
 
 The dev server starts on port 3000. Visit http://localhost:3000 to see the home page.
 
@@ -30,6 +29,6 @@ The dev server starts on port 3000. Visit http://localhost:3000 to see the home 
 
 | Variable | Required | Description |
 |----------|----------|-------------|
-| `DOTENV_PRIVATE_KEY_DEVELOPMENT` | Yes | Decrypts the checked-in development env values from `.env.vault` |
+| `DOTENV_PRIVATE_KEY_DEVELOPMENT` | Yes | Required by the preflight check before `dev` or `build` |
 
 Copy `.env.example` to `.env.keys` and provide the dotenvx private key there.

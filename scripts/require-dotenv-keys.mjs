@@ -8,9 +8,8 @@ const missingKeys = requiredKeys.filter((name) => {
 if (missingKeys.length > 0) {
   console.error(
     [
-      'Missing required environment variables for dotenvx decryption.',
+      'Missing required environment variables.',
       `Add ${missingKeys.join(', ')} before running this app.`,
-      'This repository keeps its runtime env values in .env.vault.',
     ].join(' '),
   );
 
