@@ -32,3 +32,4 @@ The dev server starts on port 3000. Visit http://localhost:3000 to see the home 
 | `GREETING` | `Hello from the eval test app!` | Displayed on the home page |
 
 Copy `.env.example` to `.env.local` to customize.
+e2e: github provider test 2026-07-07
